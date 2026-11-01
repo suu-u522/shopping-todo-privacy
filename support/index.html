@@ -62,6 +62,24 @@
   dl.states dt { flex: 0 0 5.5em; margin: 0; font-weight: 700; }
   dl.states dd { margin: 0; color: var(--ink-soft); }
 
+  /* スクリーンショット。実機のキャプチャをそのまま置く（枠は描かない） */
+  figure.shot { margin: 0 0 1.6em; }
+  figure.shot img {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  figure.shot figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-faint);
+    max-width: 280px;
+  }
+
   dl.meta { margin: 0; font-size: 15px; }
   dl.meta div { display: flex; gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
   dl.meta dt { flex: 0 0 8em; color: var(--ink-faint); margin: 0; font-size: 13px; padding-top: 2px; }
@@ -108,6 +126,12 @@
   <div><dt>✓ チェック</dt><dd>今、家にある。買わなくてよい。「家にある」に下がります</dd></div>
 </dl>
 
+<figure class="shot">
+  <img src="img/list.png" width="560" height="1217"
+       alt="買い物リストの画面。上から「必ず買う」に牛乳と卵、「買うもの」に食パン・納豆・にんじん・鶏むね肉、「家にある」に醤油・塩・砂糖が並んでいる">
+  <figcaption>3つの状態が、上から順にセクションで分かれます。空になったセクションは見出しごと消えます。</figcaption>
+</figure>
+
 <h2>使い方</h2>
 
 <h3>自宅で</h3>
@@ -127,8 +151,24 @@
 <h3>家族と共有したい / 別の端末で見たい</h3>
 <p>できません。データはお使いの端末の中だけに保存されます。</p>
 
+<h3>アイテムが増えて、探すのが大変</h3>
+<p>ヘッダーの虫めがねを押すと、開いているカテゴリーの中を名前で絞り込めます。ひらがなとカタカナ、半角と全角は区別しません。</p>
+<p>ただし<strong>読みでは引けません。</strong>「しょ」と打っても「醤油」には当たりません。</p>
+
+<figure class="shot">
+  <img src="img/search.png" width="560" height="1217"
+       alt="検索欄に「油」と入力した画面。「家にある」に醤油とごま油だけが残って表示されている">
+  <figcaption>「油」で絞り込んだところ。一致しなかったセクションは消えます。</figcaption>
+</figure>
+
 <h3>間違って消したアイテムを戻したい</h3>
 <p>戻せません。削除は取り消しができないので、入れ直してください。なお<strong>カテゴリーを消すと、中のアイテムもすべて消えます。</strong>消す前に件数の確認が出ます。</p>
+
+<figure class="shot">
+  <img src="img/categories.png" width="560" height="1217"
+       alt="カテゴリー管理の画面。スーパー、ドラッグストア、コストコ、雑貨、お肉、魚、野菜が色付きの丸とともに並んでいる">
+  <figcaption>カテゴリーの追加・名前と色の変更・削除・並び替えは、設定の「カテゴリー管理」から行います。</figcaption>
+</figure>
 
 <h3>機種変更したい</h3>
 <p>端末のバックアップ（iCloud など）からの復元であれば、買い物リストも一緒に戻ります。アプリ単体で書き出す機能はありません。</p>
